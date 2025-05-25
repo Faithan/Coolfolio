@@ -12,7 +12,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Create or Update Release
+      - name: Create or Update Release and Upload Files
         uses: softprops/action-gh-release@v1
         with:
           tag_name: latest
@@ -20,12 +20,6 @@ jobs:
           body: "Automated release from main branch."
           draft: false
           prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload all repository files
-        uses: softprops/action-gh-release@v1
-        with:
           files: ./**
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
