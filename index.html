@@ -5,13 +5,789 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev. Khemark Ocariza </title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="system_images/me1.jpg">
+
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
+
+    <nav class="navbar navbar-expand-lg  sticky-top z-5 nav-container">
+        <div
+            class="container-fluid d-flex justify-content-between align-items-center p-1 pe-3 ps-4 p-md-2   ps-xl-5 pe-xl-5   ps-xxl-5 pe-xxl-5">
+            <a href=""
+                class="navbar-brand d-flex gap-3 justify-content-center align-items-center text-decoration-none ms-xl-5 ms-lg-5 ms-md-2">
+                <img src="system_images/me1.jpg" alt="" class="profile-image">
+                <p class="mb-0 text-primary fs-4  fw-semibold text-uppercase brand-text ">Khemark Ocariza</p>
+            </a>
+
+            <!-- filepath: c:\Users\faith\OneDrive\Documents\Coolfolio\index.html -->
+            <button class="navbar-toggler ms-auto fs-3" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false"
+                aria-label="Toggle navigation" id="navbarTogglerBtn">
+                <i class="fas fa-bars fa-lg" style="color: var(--color10);" id="navbarTogglerIcon"></i>
+            </button>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const toggler = document.getElementById('navbarTogglerBtn');
+                    const icon = document.getElementById('navbarTogglerIcon');
+                    const navbar = document.getElementById('mainNavbar');
+
+                    navbar.addEventListener('show.bs.collapse', function () {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-xmark'); // Use 'fa-times' for older Font Awesome
+                    });
+                    navbar.addEventListener('hide.bs.collapse', function () {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    });
+                });
+            </script>
+
+            <div class="collapse navbar-collapse " id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex gap-5 me-xl-5  me-lg-5 ">
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 " href="">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 " href="">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 " href="">projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 " href="">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <section id="home" class="home container-fluid d-flex flex-column  align-items-center  text-primary">
+
+        <h1 class="home-header text-uppercase mb-5">Hey, I'm Khemark Ocariza</h1>
+        <p class="fs-3 custom-max-width text-center" style="margin-bottom: 50px;">Welcome to my portfolio! Here,
+            you’ll
+            find a collection of creative ideas
+            brought to life through design and
+            functionality. I love crafting digital experiences that leave a lasting impression. Explore my work and
+            let’s connect!</p>
+        <button class="" onclick="location.href='#projects';">Projects</button>
+        </div>
+        <div class="scrolldown ">
+            <div class="chevrons">
+                <div class="chevrondown"></div>
+                <div class="chevrondown"></div>
+            </div>
+        </div>
+
+
+        <div class="socials-container ">
+            <a href="https://www.linkedin.com/in/khemark-ocariza-509b71215/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Faithan" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://web.facebook.com/profile.php?id=100009511302416" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/m0n0s_/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="about" id="about">
+
+        <div class="about-header">
+            <h1 class="text-primary ">About me</h1>
+            <p class="">
+                Discover more about me, my passions, and the skills I've honed in programming and technology.
+                Explore what I do and how I bring ideas to life through code.
+            </p>
+        </div>
+
+        <div class="about-content-container">
+            <div class="about-self">
+                <h1 class="text-primary fw-bold">Get to know me!</h1>
+                <p class="text-primary">
+                    I'm a versatile Web Developer with a strong focus on building and managing the front-end and
+                    back-end of websites and web applications. Whether it's creating seamless user experiences,
+                    developing robust server-side functionality, or bridging the gap as a full-stack developer, I
+                    aim to contribute to the success of every project I work on. Check out some of my work in the
+                    Projects section.<br><br>
+
+                    I also enjoy sharing insights and lessons I've learned throughout my journey in Web Development.
+                    My goal is to support and inspire others in the developer community. Connect with me on LinkedIn
+                    or Instagram, where I regularly post content related to programming, web development, and best
+                    practices.<br><br>
+
+                    I'm open to exciting job opportunities where I can apply my skills, learn new ones, earn money
+                    obviously, and grow as a developer. If you have a role that aligns with my expertise and
+                    interests, please feel free to
+                    reach out!
+                </p>
+
+
+
+                <!-- button -->
+                <button onclick="location.href='#contact';" class="">
+                    Get in touch
+                    <div class="star-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="star-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="star-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="star-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="star-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="star-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </button>
+                <!-- end -->
+
+
+            </div>
+
+            <div class="about-skills ">
+                <h1 class="text-primary fw-bold">My Skills</h1>
+                <div class="skill-container ">
+                    <!-- HTML Skill -->
+                    <div class="skill-box">
+                        <span>HTML</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 98%;"></div>
+                        </div>
+                        <p>98/100</p>
+                        <div class="icon-container"><i class="fa-brands fa-html5"></i></div>
+                    </div>
+
+                    <!-- CSS Skill -->
+                    <div class="skill-box">
+                        <span>CSS</i></span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 98%;"></div>
+                        </div>
+                        <p>98/100</p>
+                        <div class="icon-container"><i class="fa-brands fa-css3"></i></div>
+                    </div>
+
+                    <!-- Bootstrap -->
+                    <div class="skill-box">
+                        <span>Bootstrap</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                        <p>90/100</p>
+                        <div class="icon-container"><i class="fa-brands fa-bootstrap"></i></div>
+                    </div>
+
+
+                    <!-- JavaScript Skill -->
+                    <div class="skill-box">
+                        <span>JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                        <p>90/100</p>
+                        <div class="icon-container"><i class="fa-brands fa-js"></i></div>
+                    </div>
+
+                    <!-- PHP Skill -->
+                    <div class="skill-box">
+                        <span>PHP</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
+                        <p>95/100</p>
+                        <div class="icon-container"><i class="fa-brands fa-php"></i></div>
+                    </div>
+
+                    <!-- PHP Skill -->
+                    <div class="skill-box">
+                        <span>Laravel</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                        <p>90/100</p>
+                        <div class="icon-container"><i class="fa-brands fa-laravel"></i></div>
+                    </div>
+
+                    <!-- MySQL Skill -->
+                    <div class="skill-box">
+                        <span>SQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
+                        <p>95/100</p>
+                        <div class="icon-container"><i class="fa-solid fa-database"></i></div>
+                    </div>
+
+                    <!-- Git Skill -->
+                    <div class="skill-box">
+                        <span>GIT</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
+                        <p>95/100</p>
+                        <div class="icon-container"><i class="fa-brands fa-git"></i></div>
+                    </div>
+
+                    <!-- GitHub Skill -->
+                    <div class="skill-box">
+                        <span>GitHub</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                        <p>90/100</p>
+                        <div class="icon-container"><i class="fa-brands fa-github"></i></div>
+                    </div>
+
+                    <!-- Responsive Design Skill -->
+                    <div class="skill-box">
+                        <span>Responsive Design</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 98%;"></div>
+                        </div>
+                        <p>98/100</p>
+                        <div class="icon-container"><i class="fa-solid fa-desktop"></i> <i
+                                class="fa-solid fa-laptop"></i> <i class="fa-solid fa-mobile-screen-button"></i></div>
+                    </div>
+
+
+
+
+                    <!-- TCPDF Skill -->
+                    <div class="skill-box">
+                        <span>TCPDF</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                        <p>90/100</p>
+                        <div class="icon-container"><i class="fa-solid fa-file-pdf"></i></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="projects" id="projects">
+        <div class="projects-header">
+            <h1 class="">Projects</h1>
+            <p class="">
+                Explore a collection of both personal and client projects, each accompanied by a detailed case study
+                that highlights the creative process and outcomes.
+            </p>
+        </div>
+
+
+
+
+
+        <div class="projects-base-container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- coolfolio -->
+            <div class="project-container">
+                <div class="project-image ">
+                    <div class="laptop-container">
+                        <img src="system_images/coolfolio.png" alt="Project Image" />
+                        <div class="laptop-keyboard"></div>
+                    </div>
+                </div>
+                <div class="project-info ">
+                    <h2>Coolfolio</h2>
+                    <p>
+                        I created a simple and straightforward portfolio to showcase my skills, knowledge,
+                        and projects as a budding developer. It highlights my growth with a focus on clarity,
+                        functionality, and user experience, offering visitors a glimpse into my journey in web
+                        development.
+                    </p>
+
+
+                    <button class="Documents-btn" data-bs-toggle="modal" data-bs-target="#coolfolioModal">
+                        <span class="folderContainer">
+                            <svg class="fileBack" width="146" height="113" viewBox="0 0 146 113" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 4C0 1.79086 1.79086 0 4 0H50.3802C51.8285 0 53.2056 0.627965 54.1553 1.72142L64.3303 13.4371C65.2799 14.5306 66.657 15.1585 68.1053 15.1585H141.509C143.718 15.1585 145.509 16.9494 145.509 19.1585V109C145.509 111.209 143.718 113 141.509 113H3.99999C1.79085 113 0 111.209 0 109V4Z"
+                                    fill="url(#paint0_linear_117_4)"></path>
+                                <defs>
+                                    <linearGradient id="paint0_linear_117_4" x1="0" y1="0" x2="72.93" y2="95.4804"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#8F88C2"></stop>
+                                        <stop offset="1" stop-color="#5C52A2"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <svg class="filePage" width="88" height="99" viewBox="0 0 88 99" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="88" height="99" fill="url(#paint0_linear_117_6)"></rect>
+                                <defs>
+                                    <linearGradient id="paint0_linear_117_6" x1="0" y1="0" x2="81" y2="160.5"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white"></stop>
+                                        <stop offset="1" stop-color="#686868"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                            <svg class="fileFront" width="160" height="79" viewBox="0 0 160 79" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.29306 12.2478C0.133905 9.38186 2.41499 6.97059 5.28537 6.97059H30.419H58.1902C59.5751 6.97059 60.9288 6.55982 62.0802 5.79025L68.977 1.18034C70.1283 0.410771 71.482 0 72.8669 0H77H155.462C157.87 0 159.733 2.1129 159.43 4.50232L150.443 75.5023C150.19 77.5013 148.489 79 146.474 79H7.78403C5.66106 79 3.9079 77.3415 3.79019 75.2218L0.29306 12.2478Z"
+                                    fill="url(#paint0_linear_117_5)"></path>
+                                <defs>
+                                    <linearGradient id="paint0_linear_117_5" x1="38.7619" y1="8.71323" x2="66.9106"
+                                        y2="82.8317" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#C3BBFF"></stop>
+                                        <stop offset="1" stop-color="#51469A"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </span>
+                        <p class="text">Case Study</p>
+                    </button>
+
+
+                </div>
+            </div>
+
+
+
+            <!-- Place this before </body> in your index.html -->
+            <div class="modal fade " id="coolfolioModal" tabindex="-1" aria-labelledby="coolfolioModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title  text-secondary" id="coolfolioModalLabel">Case Study
+                            </h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div
+                            class="modal-body text-center d-flex flex-column align-items-center justify-content-start modal-overflow">
+                            <!-- Your custom content here -->
+                            <h1 class="fs-1 fw-bold">Coolfolio </h1>
+
+                            <div class="project-image ">
+                                <div class="laptop-container">
+                                    <img src="system_images/coolfolio.png" alt="Project Image" />
+                                    <div class="laptop-keyboard"></div>
+                                </div>
+                            </div>
+
+                            <h2 class="my-3">Project Overview</h2>
+                            <div class="modal-paragraph fs-5 ">
+                                <p class="text-justify my-3">
+                                    I created a simple and straightforward portfolio to showcase my skills, knowledge,
+                                    and projects as a budding developer. This portfolio is a reflection of my dedication
+                                    to learning and growth, presenting my abilities in a way that is both accessible and
+                                    visually appealing. It serves as a snapshot of my journey so far, highlighting my
+                                    determination to master the fundamentals of web development.
+                                </p>
+                                <p class="text-justify my-3">
+                                    The portfolio is designed with clarity and functionality in mind, ensuring a
+                                    user-friendly
+                                    experience for visitors. It includes sections that effectively organize my work,
+                                    making
+                                    it
+                                    easy for viewers to explore my projects, skills, and background. By focusing on
+                                    clean
+                                    design
+                                    and intuitive navigation, I aimed to create a platform that not only informs but
+                                    also
+                                    engages those who view it.
+                                </p>
+                                <p class="text-justify my-3">
+                                    As a personal milestone, this portfolio symbolizes my transition from a learner to a
+                                    creator,
+                                    demonstrating the skills I've acquired and the progress I've made. It also acts as a
+                                    professional introduction, showcasing my passion for web development and my
+                                    commitment
+                                    to
+                                    continuous improvement. I hope that through this project, visitors can see the
+                                    potential
+                                    I
+                                    bring as a future full-stack developer.
+                                </p>
+
+
+                                <div class="project-language ">
+                                    <h2 class="my-3">Tool Used</h2>
+                                    <div class="language-container">
+                                        <div><i class="fa-brands fa-html5"></i> HTML</div>
+                                        <div><i class="fa-brands fa-css3-alt"></i> CSS</div>
+                                        <div><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
+                                        <div><i class="fa-brands fa-js"></i> JavaScript</div>
+                                        <div><i class="fa-brands fa-git-alt"></i> GIT</div>
+                                        <div><i class="fa-brands fa-github"></i> Github</div>
+                                        <div><i class="fa-brands fa-font-awesome"></i> Fontawesome</div>
+                                    </div>
+                                </div>
+
+                                <div class="link-container">
+                                    <h2 class="my-3 fs-3 ">See Live</h2>
+
+                                    <a href="index.html" id="visit">Visit Website <i
+                                            class="fa-solid fa-up-right-from-square"></i></a>
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="project-container">
+                <div class="project-image ">
+                    <div class="laptop-container">
+                        <img src="system_images/royale.png" alt="Project Image" />
+                        <div class="laptop-keyboard"></div>
+                    </div>
+                </div>
+                <div class="project-info ">
+                    <h2>Royale</h2>
+                    <p>
+                        I developed an online request and order system for Royale Tailoring, allowing customers to
+                        book appointments for tailoring services and place orders for product pickups. This website
+                        serves as my capstone project for the Bachelor of Science in Computer Science (BSCS)
+                        program.
+                    </p>
+                    <button class="Documents-btn" onclick="location.href='royale.php';">
+                        <span class="folderContainer">
+                            <svg class="fileBack" width="146" height="113" viewBox="0 0 146 113" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 4C0 1.79086 1.79086 0 4 0H50.3802C51.8285 0 53.2056 0.627965 54.1553 1.72142L64.3303 13.4371C65.2799 14.5306 66.657 15.1585 68.1053 15.1585H141.509C143.718 15.1585 145.509 16.9494 145.509 19.1585V109C145.509 111.209 143.718 113 141.509 113H3.99999C1.79085 113 0 111.209 0 109V4Z"
+                                    fill="url(#paint0_linear_117_4)"></path>
+                                <defs>
+                                    <linearGradient id="paint0_linear_117_4" x1="0" y1="0" x2="72.93" y2="95.4804"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#8F88C2"></stop>
+                                        <stop offset="1" stop-color="#5C52A2"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <svg class="filePage" width="88" height="99" viewBox="0 0 88 99" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="88" height="99" fill="url(#paint0_linear_117_6)"></rect>
+                                <defs>
+                                    <linearGradient id="paint0_linear_117_6" x1="0" y1="0" x2="81" y2="160.5"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white"></stop>
+                                        <stop offset="1" stop-color="#686868"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                            <svg class="fileFront" width="160" height="79" viewBox="0 0 160 79" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.29306 12.2478C0.133905 9.38186 2.41499 6.97059 5.28537 6.97059H30.419H58.1902C59.5751 6.97059 60.9288 6.55982 62.0802 5.79025L68.977 1.18034C70.1283 0.410771 71.482 0 72.8669 0H77H155.462C157.87 0 159.733 2.1129 159.43 4.50232L150.443 75.5023C150.19 77.5013 148.489 79 146.474 79H7.78403C5.66106 79 3.9079 77.3415 3.79019 75.2218L0.29306 12.2478Z"
+                                    fill="url(#paint0_linear_117_5)"></path>
+                                <defs>
+                                    <linearGradient id="paint0_linear_117_5" x1="38.7619" y1="8.71323" x2="66.9106"
+                                        y2="82.8317" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#C3BBFF"></stop>
+                                        <stop offset="1" stop-color="#51469A"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </span>
+                        <p class="text">Case Study</p>
+                    </button>
+                </div>
+            </div>
+
+
+
+
+            <div class="project-container">
+                <div class="project-image ">
+                    <div class="laptop-container">
+                        <img src="system_images/estregan_pic.png" alt="Project Image" />
+                        <div class="laptop-keyboard"></div>
+                    </div>
+                </div>
+                <div class="project-info ">
+                    <h2>Estregan Beach Resort</h2>
+                    <p>
+                        I developed an online reservation system for Estregan Beach Resort, allowing customers to
+                        easily book rooms and cottages. This system streamlines the resort’s reservation process,
+                        making it more organized and efficient for the owner. This project is part of my Bachelor of
+                        Science in Computer Science (BSCS) coursework.
+                    </p>
+                    <button class="Documents-btn" onclick="location.href='estregan.php';">
+                        <span class="folderContainer">
+                            <svg class="fileBack" width="146" height="113" viewBox="0 0 146 113" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 4C0 1.79086 1.79086 0 4 0H50.3802C51.8285 0 53.2056 0.627965 54.1553 1.72142L64.3303 13.4371C65.2799 14.5306 66.657 15.1585 68.1053 15.1585H141.509C143.718 15.1585 145.509 16.9494 145.509 19.1585V109C145.509 111.209 143.718 113 141.509 113H3.99999C1.79085 113 0 111.209 0 109V4Z"
+                                    fill="url(#paint0_linear_117_4)"></path>
+                                <defs>
+                                    <linearGradient id="paint0_linear_117_4" x1="0" y1="0" x2="72.93" y2="95.4804"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#8F88C2"></stop>
+                                        <stop offset="1" stop-color="#5C52A2"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <svg class="filePage" width="88" height="99" viewBox="0 0 88 99" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="88" height="99" fill="url(#paint0_linear_117_6)"></rect>
+                                <defs>
+                                    <linearGradient id="paint0_linear_117_6" x1="0" y1="0" x2="81" y2="160.5"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white"></stop>
+                                        <stop offset="1" stop-color="#686868"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                            <svg class="fileFront" width="160" height="79" viewBox="0 0 160 79" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.29306 12.2478C0.133905 9.38186 2.41499 6.97059 5.28537 6.97059H30.419H58.1902C59.5751 6.97059 60.9288 6.55982 62.0802 5.79025L68.977 1.18034C70.1283 0.410771 71.482 0 72.8669 0H77H155.462C157.87 0 159.733 2.1129 159.43 4.50232L150.443 75.5023C150.19 77.5013 148.489 79 146.474 79H7.78403C5.66106 79 3.9079 77.3415 3.79019 75.2218L0.29306 12.2478Z"
+                                    fill="url(#paint0_linear_117_5)"></path>
+                                <defs>
+                                    <linearGradient id="paint0_linear_117_5" x1="38.7619" y1="8.71323" x2="66.9106"
+                                        y2="82.8317" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#C3BBFF"></stop>
+                                        <stop offset="1" stop-color="#51469A"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </span>
+                        <p class="text">Case Study</p>
+                    </button>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="project-container">
+                <div class="project-image ">
+                    <div class="laptop-container">
+                        <img src="system_images/ckcm_grading.png" alt="Project Image" />
+                        <div class="laptop-keyboard"></div>
+                    </div>
+                </div>
+                <div class="project-info ">
+                    <h2>CKCM Grading System</h2>
+                    <p>
+                        We designed and implemented the CKCM Grading System, a web-based platform that simplifies the
+                        process of managing and calculating student grades. This system enhances efficiency and accuracy
+                        for educators, providing an intuitive interface for inputting, updating, and reviewing grades.
+                        It was developed as part of my Bachelor of Science in Computer Science (BSCS) coursework during
+                        my internship at Christ The King College de Maranding, Inc.
+                    </p>
+                    <button class="Documents-btn" onclick="location.href='ckcm_grading.php';">
+                        <span class="folderContainer">
+                            <svg class="fileBack" width="146" height="113" viewBox="0 0 146 113" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 4C0 1.79086 1.79086 0 4 0H50.3802C51.8285 0 53.2056 0.627965 54.1553 1.72142L64.3303 13.4371C65.2799 14.5306 66.657 15.1585 68.1053 15.1585H141.509C143.718 15.1585 145.509 16.9494 145.509 19.1585V109C145.509 111.209 143.718 113 141.509 113H3.99999C1.79085 113 0 111.209 0 109V4Z"
+                                    fill="url(#paint0_linear_117_4)"></path>
+                                <defs>
+                                    <linearGradient id="paint0_linear_117_4" x1="0" y1="0" x2="72.93" y2="95.4804"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#8F88C2"></stop>
+                                        <stop offset="1" stop-color="#5C52A2"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <svg class="filePage" width="88" height="99" viewBox="0 0 88 99" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="88" height="99" fill="url(#paint0_linear_117_6)"></rect>
+                                <defs>
+                                    <linearGradient id="paint0_linear_117_6" x1="0" y1="0" x2="81" y2="160.5"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white"></stop>
+                                        <stop offset="1" stop-color="#686868"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                            <svg class="fileFront" width="160" height="79" viewBox="0 0 160 79" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.29306 12.2478C0.133905 9.38186 2.41499 6.97059 5.28537 6.97059H30.419H58.1902C59.5751 6.97059 60.9288 6.55982 62.0802 5.79025L68.977 1.18034C70.1283 0.410771 71.482 0 72.8669 0H77H155.462C157.87 0 159.733 2.1129 159.43 4.50232L150.443 75.5023C150.19 77.5013 148.489 79 146.474 79H7.78403C5.66106 79 3.9079 77.3415 3.79019 75.2218L0.29306 12.2478Z"
+                                    fill="url(#paint0_linear_117_5)"></path>
+                                <defs>
+                                    <linearGradient id="paint0_linear_117_5" x1="38.7619" y1="8.71323" x2="66.9106"
+                                        y2="82.8317" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#C3BBFF"></stop>
+                                        <stop offset="1" stop-color="#51469A"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </span>
+                        <p class="text">Case Study</p>
+                    </button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </section>
+
+
 
 </body>
 

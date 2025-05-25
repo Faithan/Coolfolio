@@ -15,11 +15,16 @@ jobs:
       - name: Create or Update Release and Upload Files
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: latest
-          name: Latest Release
+          # Change 'tag_name' to a new version (e.g., v1.0.1) to create a new release.
+          # If you keep the same tag (e.g., 'latest'), it will update the existing release.
+          tag_name: v.1.1.1
+          # Change 'name' to match your release version if you update 'tag_name'.
+          name: Coolfolio v1.1.1
+          # Update 'body' with release notes or version info as needed.
           body: "Automated release from main branch."
           draft: false
           prerelease: false
+          # This uploads all files in the repository to the release.
           files: ./**
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
