@@ -16,6 +16,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: latest
+          release_name: "Release 0.1.0"
           name: Latest Release
           body: "Automated release from main branch."
           draft: false
