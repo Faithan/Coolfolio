@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Create or Update Release and Upload Files
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
           name: Latest Release
