@@ -1272,7 +1272,8 @@
         </div>
 
         <div class="copyright-container">
-            <p class="text-primary">© Copyright <span id="current-year"></span>. Made by <a href="">Khemark Ocariza</a>
+            <p class="text-primary"><span id="release-version">Loading...</span> © Copyright <span
+                    id="current-year"></span>. Made by <a href="">Khemark Ocariza</a>
             </p>
         </div>
 
@@ -1283,15 +1284,28 @@
 
 </html>
 
-
 <script>
-    // Use a unique namespace/key for your site
-    fetch('https://api.countapi.xyz/hit/faithan-coolfolio/visits')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('visit-count').textContent = data.value;
+    fetch('version.txt')
+        .then(response => response.text())
+        .then(version => {
+            document.getElementById('release-version').textContent = version.trim();
+        })
+        .catch(() => {
+            document.getElementById('release-version').textContent = "Unknown";
         });
 </script>
+
+<script>
+    fetch('https://visits.deno.dev/faithan-coolfolio')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('visit-count').textContent = data.total;
+        })
+        .catch(() => {
+            document.getElementById('visit-count').textContent = "Unavailable";
+        });
+</script>
+
 <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
 </script>
