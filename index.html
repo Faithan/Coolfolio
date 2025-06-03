@@ -1283,16 +1283,29 @@
 </body>
 
 </html>
-
 <script>
-    fetch('version.txt')
-        .then(response => response.text())
-        .then(version => {
-            document.getElementById('release-version').textContent = version.trim();
-        })
-        .catch(() => {
-            document.getElementById('release-version').textContent = "Unknown";
-        });
+    document.addEventListener('DOMContentLoaded', function () {
+        const releaseVersionElement = document.getElementById('release-version');
+
+        // Replace 'faithan/Coolfolio' with your GitHub repository's owner and name
+        const repoOwner = 'faithan';
+        const repoName = 'Coolfolio';
+
+        fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/releases/latest`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch release version');
+                }
+                return response.json();
+            })
+            .then(data => {
+                releaseVersionElement.textContent = data.tag_name || 'Unavailable';
+            })
+            .catch(error => {
+                console.error('Error fetching release version:', error);
+                releaseVersionElement.textContent = 'Unavailable';
+            });
+    });
 </script>
 
 <script>
