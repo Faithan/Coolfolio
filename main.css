@@ -176,6 +176,15 @@ body .navbar-toggler {
     display: none;
 }
 
+
+
+
+
+
+
+
+
+
 /* home */
 .home {
     width: 100%;
@@ -798,8 +807,8 @@ body .navbar-toggler {
 }
 
 .laptop-container img {
-    max-width: 490px;
-    width: 490px;
+    max-width: 510px;
+    width: 510px;
     border: 15px solid black;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -872,7 +881,7 @@ body .navbar-toggler {
     width: fit-content;
     height: 45px;
     border: none;
-    padding: 0px 15px;
+    padding: 0px 10px;
     border-radius: 5px;
 
     background: rgb(58, 123, 213);
@@ -949,7 +958,7 @@ body .navbar-toggler {
 
 
 .project-language h2 {
-   
+
     color: var(--text-color);
     margin-bottom: 20px;
     text-align: start;
@@ -964,16 +973,20 @@ body .navbar-toggler {
 }
 
 .language-container div {
-  
+
     text-align: center;
     padding: 5px;
     font-weight: 500;
     color: var(--text-color);
     background-color: var(--color8);
-    border: 1px solid #ddd;
+    border: 1px solid var(--color10);
     border-radius: 5px;
 }
 
+.language-container div:hover {
+    transform: translateY(-2px);
+    transition: ease-in-out 0.3s;
+}
 
 
 .link-container h2 {
@@ -1005,6 +1018,155 @@ body .navbar-toggler {
     transform: translateY(-2px);
     transition: ease-in-out 0.3s;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* contact section */
+
+
+/* contact */
+.contact {
+
+    width: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 50px 0;
+    background-color: #212529;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(180,768,367)'%3E%3Cstop offset='0' stop-color='%23212529'/%3E%3Cstop offset='1' stop-color='%23343A40'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='639' height='532.5' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.01'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+.contact h1 {
+    margin: 50px 0 20px 0;
+    color: var(--text-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 3rem;
+    border-bottom: 2px solid var(--color10);
+}
+
+
+.contact p {
+    font-size: 1.5rem;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color9);
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+form label {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+/* Styling form elements */
+form input,
+form textarea {
+    background-color: var(--color7);
+    color: var(--text-color);
+    min-width: 400px;
+    flex-grow: 1;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    transition: border-color 0.3s ease;
+}
+
+form textarea {
+    height: 100px;
+}
+
+/* Input and textarea focus styling */
+form input:focus,
+form textarea:focus {
+    border-color: var(--color10);
+    outline: none;
+}
+
+/* Placeholder text styling */
+form input::placeholder,
+form textarea::placeholder {
+    color: #929292;
+}
+
+/* Submit button styling */
+form button {
+    background: rgb(58, 123, 213);
+    background: linear-gradient(0deg, rgba(58, 123, 213, 1) 0%, rgba(58, 207, 213, 1) 100%);
+
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: fit-content;
+    align-self: flex-end;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--color11);
+    transform: translateY(-2px);
+    transition: ease-in-out 0.3s;
+}
+
+/* Add responsive design */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1085,353 +1247,533 @@ body .navbar-toggler {
     }
 
 
+    /* contact */
+
+    .contact {
+        padding-top: 40px;
+    }
+
+    .contact h1 {
+        margin: 50px 0 20px 0;
+        color: var(--text-color);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 2rem;
+        border-bottom: 2px solid var(--color10);
+    }
 
 
-
-
-
-    .language-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px;
-        max-width: 300px;
+    .contact p {
+        font-size: 1.5rem;
+        text-align: justify;
+        margin-bottom: 50px;
         padding: 20px;
     }
 
-    .language-container div {
-        font-size: 1rem;
-        text-align: center;
-        padding: 10px;
+    form {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color9);
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    }
+
+    form label {
+        color: var(--text-color);
         font-weight: 500;
-        color: var(--text-color);
-        background-color: var(--color8);
-        border: 1px solid #ddd;
-        border-radius: 5px;
+        font-size: 1.5rem;
+    }
+
+    /* Styling form elements */
+    form input,
+    form textarea {
+
+        min-width: 250px;
+        padding: 10px;
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* end of home */
+@media (max-width: 1024px) {
+    .about-content-container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+
+    .about-self {
+        max-width: 1024px;
+        text-align: start;
     }
 
 
 
+}
 
 
 
 
+/* Custom styles for collapsed navbar (mobile) */
+@media (max-width: 991.98px) {
 
-    .link-container a {
-        padding: 10px 20px;
+    /* Bootstrap's lg breakpoint */
+    #mainNavbar {
+        background: var(--color8) !important;
+        padding: 1.5rem 1rem;
+        border-radius: 0 0 1rem 1rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    #mainNavbar .nav-link {
+        color: var(--color10) !important;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
         text-align: center;
-        background-color: var(--color8);
+
+    }
+
+    #mainNavbar .nav-link:hover {
+        color: #fff;
+        background: #3acfd5;
+        border-radius: 0.5rem;
+    }
+
+    #mainNavbar .navbar-nav {
+        flex-direction: column !important;
+        gap: 0;
+    }
+
+    .socials-container {
+        display: none;
+    }
+
+
+
+
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .home-header {
+        font-size: 3.5rem;
+    }
+
+    /* start of about */
+
+    .about {
+        padding-top: 40px;
+    }
+
+    .about-header h1 {
+        margin: 50px 0 20px 0;
         color: var(--text-color);
-        text-decoration: none;
         font-weight: 600;
+        text-transform: uppercase;
+        font-size: 2rem;
+        border-bottom: 2px solid var(--color10);
+    }
+
+    .about-header p {
+        font-size: 1.5rem;
+        color: var(--text-color2);
+        max-width: 1200px;
+        text-align: justify;
+        padding: 20px;
+    }
+
+
+    .about-content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+
+
+
+
+
+    .about-self {
+
+        max-width: 768px;
+        text-align: start;
+    }
+
+    .about-self h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .about-self p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    /* button */
+    .about-self button {
+        margin-top: 20px;
+        position: relative;
+        padding: 12px 20px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #ffffff;
+        border: 3px solid var(--color10);
+        border-radius: 8px;
+        box-shadow: 0 0 0 #ffffff;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+    /* projects section */
+
+    .projects {
+        padding-top: 40px;
+    }
+
+    .projects-header {
+        margin-bottom: 50px;
+    }
+
+    .projects-header h1 {
+        margin: 50px 0 20px 0;
+        color: var(--text-color);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 2rem;
+        border-bottom: 2px solid var(--color10);
+    }
+
+    .projects-header p {
+        font-size: 1.5rem;
+        color: var(--text-color2);
+        max-width: auto;
+        text-align: justify;
+        padding: 20px;
+    }
+
+
+
+    .projects-base-container {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        padding-bottom: 100px;
+    }
+
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+
+    /* laptop design */
+    .project-image {
+        flex-grow: 1;
+        max-width: 300px;
+        width: 300px;
+    }
+
+    .laptop-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .laptop-container img {
+        max-width: 250px;
+        width: 250px;
+        border: 10px solid black;
+    }
+
+    .laptop-container .laptop-keyboard {
+
+        height: 13px;
+
+    }
+
+
+
+
+
+    /* info */
+    .project-info {
+        padding: 20px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .project-info h2 {
+        font-size: 2rem;
+        color: var(--text-color);
+    }
+
+    .project-info p {
+        font-size: 1.2rem;
+        text-align: justify;
+        line-height: 1.5;
+
+    }
+
+    /* From Uiverse.io by vinodjangid07 */
+    .Documents-btn {
+        align-self: center;
+    }
+
+
+
+}
+
+@media screen and (max-width: 576px) {
+    .home-header {
+        font-size: 2.5rem;
+    }
+
+
+}
+
+@media screen and (max-width: 400px) {
+    .home-header {
+        font-size: 2rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+/* footer */
+footer {
+    width: 100%;
+    background-color: black;
+
+}
+
+.footer-info-container {
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+    padding: 50px 200px;
+    gap: 20px;
+}
+
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+footer h1 {
+    font-size: 1.5rem;
+    color: var(--text-color)
+}
+
+.footer-info p {
+    max-width: 500px;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    text-align: justify;
+    color: var(--text-color)
+}
+
+.footer-social-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.footer-social-info .footer-social-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+
+
+.footer-social-container a {
+    color: var(--text-color);
+    /* Default color */
+    font-size: 2rem;
+    /* Icon size */
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.footer-social-container a:hover {
+    transition: ease-in-out .3s;
+    color: var(--color11);
+}
+
+.copyright-container {
+    border-top: 1px solid var(--color7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.copyright-container a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .footer-info-container {
+        display: flex;
+        flex: column;
+        justify-content: space-between;
+        padding: 20px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex-grow: 1;
+    }
+
+    .footer-info p {
+        max-width: 500px;
+        line-height: 1.5;
         font-size: 1rem;
-        border-radius: 5px;
-        border: 1px solid var(--color10);
+        text-align: justify;
+    }
+
+    .footer-social-info {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
 
-    .link-container a:hover {
-        transform: translateY(-5px);
-        transition: ease-in-out 0.3s;
+    .footer-social-info .footer-social-container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
     }
 
 
 
 
+    .footer-social-container a {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* end of home */
-    @media (max-width: 1024px) {
-        .about-content-container {
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            padding: 20px 10px;
-        }
-
-
-        .about-self {
-            max-width: 1024px;
-            text-align: start;
-        }
-
-
+        font-size: 1.5rem;
+        /* Icon size */
 
     }
 
 
 
 
-    /* Custom styles for collapsed navbar (mobile) */
-    @media (max-width: 991.98px) {
 
-        /* Bootstrap's lg breakpoint */
-        #mainNavbar {
-            background: var(--color8) !important;
-            padding: 1.5rem 1rem;
-            border-radius: 0 0 1rem 1rem;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-        }
-
-        #mainNavbar .nav-link {
-            color: var(--color10) !important;
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            text-align: center;
-
-        }
-
-        #mainNavbar .nav-link:hover {
-            color: #fff;
-            background: #3acfd5;
-            border-radius: 0.5rem;
-        }
-
-        #mainNavbar .navbar-nav {
-            flex-direction: column !important;
-            gap: 0;
-        }
-
-        .socials-container {
-            display: none;
-        }
-
-
-
-
-
-
-    }
-
-    @media screen and (max-width: 768px) {
-        .home-header {
-            font-size: 3.5rem;
-        }
-
-        /* start of about */
-
-        .about {
-            padding-top: 40px;
-        }
-
-        .about-header h1 {
-            margin: 50px 0 20px 0;
-            color: var(--text-color);
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 2rem;
-            border-bottom: 2px solid var(--color10);
-        }
-
-        .about-header p {
-            font-size: 1.5rem;
-            color: var(--text-color2);
-            max-width: 1200px;
-            text-align: justify;
-            padding: 20px;
-        }
-
-
-        .about-content-container {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            padding: 20px;
-        }
-
-
-
-
-
-        .about-self {
-
-            max-width: 768px;
-            text-align: start;
-        }
-
-        .about-self h1 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-        }
-
-        .about-self p {
-            font-size: 1.2rem;
-            line-height: 1.5;
-            text-align: justify;
-        }
-
-        /* button */
-        .about-self button {
-            margin-top: 20px;
-            position: relative;
-            padding: 12px 20px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #ffffff;
-            border: 3px solid var(--color10);
-            border-radius: 8px;
-            box-shadow: 0 0 0 #ffffff;
-            transition: all 0.3s ease-in-out;
-            cursor: pointer;
-        }
-
-
-
-
-
-
-        /* projects section */
-
-        .projects {
-            padding-top: 40px;
-        }
-
-        .projects-header {
-            margin-bottom: 50px;
-        }
-
-        .projects-header h1 {
-            margin: 50px 0 20px 0;
-            color: var(--text-color);
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 2rem;
-            border-bottom: 2px solid var(--color10);
-        }
-
-        .projects-header p {
-            font-size: 1.5rem;
-            color: var(--text-color2);
-            max-width: auto;
-            text-align: justify;
-            padding: 20px;
-        }
-
-
-
-        .projects-base-container {
-            display: flex;
-            flex-direction: column;
-            gap: 100px;
-            padding-bottom: 100px;
-        }
-
-
-        .project-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-
-
-        /* laptop design */
-        .project-image {
-            flex-grow: 1;
-            max-width: 300px;
-            width: 300px;
-        }
-
-        .laptop-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .laptop-container img {
-            max-width: 250px;
-            width: 250px;
-            border: 10px solid black;
-        }
-
-        .laptop-container .laptop-keyboard {
-
-            height: 13px;
-
-        }
-
-
-
-
-
-        /* info */
-        .project-info {
-            padding: 20px;
-            width: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-
-        }
-
-        .project-info h2 {
-            font-size: 2rem;
-            color: var(--text-color);
-        }
-
-        .project-info p {
-            font-size: 1.2rem;
-            text-align: justify;
-            line-height: 1.5;
-
-        }
-
-        /* From Uiverse.io by vinodjangid07 */
-        .Documents-btn {
-            align-self: center;
-        }
-
-
-
-    }
-
-    @media screen and (max-width: 576px) {
-        .home-header {
-            font-size: 2.5rem;
-        }
-
-
-    }
-
-    @media screen and (max-width: 400px) {
-        .home-header {
-            font-size: 2rem;
-        }
-
-    }
 }

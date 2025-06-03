@@ -53,16 +53,16 @@
             <div class="collapse navbar-collapse " id="mainNavbar">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex gap-5 me-xl-5  me-lg-5 ">
                     <li class="nav-item">
-                        <a class="nav-link fs-5 " href="">home</a>
+                        <a class="nav-link fs-5 " href="#home">home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 " href="">about</a>
+                        <a class="nav-link fs-5 " href="#about">about</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 " href="">projects</a>
+                        <a class="nav-link fs-5 " href="#projects">projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 " href="">contact</a>
+                        <a class="nav-link fs-5 " href="#contact">contact</a>
                     </li>
                 </ul>
             </div>
@@ -367,8 +367,11 @@
     </section>
 
 
-
+    <!-- project section  -->
     <section class="projects" id="projects">
+
+
+        <!-- project header -->
         <div class="projects-header">
             <h1 class="">Projects</h1>
             <p class="">
@@ -381,24 +384,8 @@
 
 
 
+        <!-- project base container -->
         <div class="projects-base-container">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             <!-- coolfolio -->
@@ -469,20 +456,22 @@
 
 
 
-            <!-- Place this before </body> in your index.html -->
+
+
+            <!-- modal for coolfolio -->
             <div class="modal fade " id="coolfolioModal" tabindex="-1" aria-labelledby="coolfolioModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-lg ">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 class="modal-title  text-secondary" id="coolfolioModalLabel">Case Study
-                            </h3>
+                            <h4 class="modal-title  text-secondary" id="coolfolioModalLabel">Case Study
+                            </h4>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div
                             class="modal-body text-center d-flex flex-column align-items-center justify-content-start modal-overflow">
                             <!-- Your custom content here -->
-                            <h1 class="fs-1 fw-bold">Coolfolio </h1>
+                            <h1 class="fs-1 fw-bold my-2">Coolfolio </h1>
 
                             <div class="project-image ">
                                 <div class="laptop-container">
@@ -543,7 +532,7 @@
                                 <div class="link-container">
                                     <h2 class="my-3 fs-3 ">See Live</h2>
 
-                                    <a href="index.html" id="visit">Visit Website <i
+                                    <a href="index.html" id="visit" class="text-secondary">Visit Website <i
                                             class="fa-solid fa-up-right-from-square"></i></a>
 
                                 </div>
@@ -554,11 +543,13 @@
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary px-3 py-2"
+                                data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- coolfolio ending -->
 
 
 
@@ -584,8 +575,7 @@
 
 
 
-
-
+            <!-- royale project -->
             <div class="project-container">
                 <div class="project-image ">
                     <div class="laptop-container">
@@ -601,7 +591,7 @@
                         serves as my capstone project for the Bachelor of Science in Computer Science (BSCS)
                         program.
                     </p>
-                    <button class="Documents-btn" onclick="location.href='royale.php';">
+                    <button class="Documents-btn" data-bs-toggle="modal" data-bs-target="#royaleModal">
                         <span class="folderContainer">
                             <svg class="fileBack" width="146" height="113" viewBox="0 0 146 113" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -646,6 +636,104 @@
                     </button>
                 </div>
             </div>
+
+
+
+            <!-- modal for Royale-->
+            <div class="modal fade " id="royaleModal" tabindex="-1" aria-labelledby="royaleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title  text-secondary" id="royaleModalLabel">Case Study
+                            </h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div
+                            class="modal-body text-center d-flex flex-column align-items-center justify-content-start modal-overflow">
+                            <!-- Your custom content here -->
+                            <p class="fs-1 fw-bold my-2">Royale</p>
+
+                            <div class="project-image ">
+                                <div class="laptop-container">
+                                    <img src="system_images/royale.png" alt="Project Image" />
+                                    <div class="laptop-keyboard"></div>
+                                </div>
+                            </div>
+
+                            <h2 class="my-3 ">Project Overview</h2>
+                            <div class="modal-paragraph fs-5 ">
+                                <p class="text-justify my-3">
+                                    I developed an online request and order system for Royale Tailoring, allowing
+                                    customers to book appointments for tailoring services and place orders for product
+                                    pickups. This website serves as my capstone project for the Bachelor of Science in
+                                    Computer Science (BSCS) program.
+                                </p>
+                                <p class="text-justify my-3">
+                                    This project marks the beginning of my journey into web development and serves as an
+                                    experimentation ground for learning how to create a fully functional website. While
+                                    it may not yet be a polished or fully secured system, it represents my efforts as a
+                                    student to understand the complexities of building web applications. Please keep in
+                                    mind that this is a school project, and perfection is not the goal—but rather, the
+                                    opportunity to learn and grow as a developer.
+                                </p>
+                                <p class="text-justify my-3">
+                                    As you explore the system, you will notice that it introduces various features that
+                                    showcase my budding skills in full-stack web development. From designing user
+                                    interfaces to implementing backend functionality, this project demonstrates the
+                                    range of technical abilities I’ve acquired during my studies. Although it may have
+                                    its limitations, I hope it provides a glimpse of my potential and dedication to
+                                    learning.
+                                </p>
+
+
+                                <div class="project-language ">
+                                    <h2 class="my-3">Tool Used</h2>
+                                    <div class="language-container ">
+                                        <div><i class="fa-brands fa-html5"></i> HTML</div>
+                                        <div><i class="fa-brands fa-css3-alt"></i> CSS</div>
+                                        <div><i class="fa-brands fa-php"></i> PHP</div>
+                                        <div><i class="fa-solid fa-database"></i> MySQL</div>
+                                        <div><i class="fa-brands fa-js"></i> JavaScript</div>
+                                        <div><i class="fa-brands fa-git-alt"></i> GIT</div>
+                                        <div><i class="fa-brands fa-github"></i> Github</div>
+                                        <div><i class="fa-brands fa-font-awesome"></i> Fontawesome</div>
+                                        <div><i class="fa-solid fa-bell"></i> Toastr</div>
+                                        <div><i class="fa-solid fa-check-double"></i> SweetAlert2</div>
+                                    </div>
+                                </div>
+
+                                <div class="link-container">
+                                    <h2 class="my-3 fs-3 ">See Live</h2>
+
+                                    <a href="https://royaletailoring.free.nf/" target="_blank" id="visit"
+                                        class="text-secondary">Visit Website <i
+                                            class="fa-solid fa-up-right-from-square "></i></a>
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary py-2 px-3"
+                                data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- royale ending -->
+
+
+
+
+
+
+
+
+
 
 
 
@@ -665,7 +753,7 @@
                         making it more organized and efficient for the owner. This project is part of my Bachelor of
                         Science in Computer Science (BSCS) coursework.
                     </p>
-                    <button class="Documents-btn" onclick="location.href='estregan.php';">
+                    <button class="Documents-btn" data-bs-toggle="modal" data-bs-target="#estreganModal">
                         <span class="folderContainer">
                             <svg class="fileBack" width="146" height="113" viewBox="0 0 146 113" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -712,10 +800,116 @@
             </div>
 
 
+            <!-- modal for Estregan-->
+            <div class="modal fade " id="estreganModal" tabindex="-1" aria-labelledby="estreganModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title  text-secondary" id="estreganModalLabel">Case Study
+                            </h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div
+                            class="modal-body text-center d-flex flex-column align-items-center justify-content-start modal-overflow">
+                            <!-- Your custom content here -->
+                            <p class="fs-1 fw-bold my-2">Estregan Beach Resort</p>
+
+                            <div class="project-image ">
+                                <div class="laptop-container">
+                                    <img src="system_images/estregan_pic.png" alt="Project Image" />
+                                    <div class="laptop-keyboard"></div>
+                                </div>
+                            </div>
+
+                            <h2 class="my-3 ">Project Overview</h2>
+                            <div class="modal-paragraph fs-5 ">
+                                <p class="text-justify my-3">
+                                    I developed an online reservation system for Estregan Beach Resort, allowing
+                                    customers to easily book rooms and cottages. This system streamlines the resort’s
+                                    reservation process, making it more organized and efficient for the owner. This
+                                    project is part of my Bachelor of Science in Computer Science (BSCS) coursework.
+                                </p>
+                                <p class="text-justify my-3">
+                                    This project marks the beginning of my journey into web development and serves as an
+                                    experimentation ground for learning how to create a fully functional website. While
+                                    it may not yet be a polished or fully secured system, it represents my efforts as a
+                                    student to understand the complexities of building web applications. Please keep in
+                                    mind that this is a school project, and perfection is not the goal—but rather, the
+                                    opportunity to learn and grow as a developer.
+                                </p>
+                                <p class="text-justify my-3">
+                                    As you explore the system, you will notice that it introduces various features that
+                                    showcase my budding skills in full-stack web development. From designing user
+                                    interfaces to implementing backend functionality, this project demonstrates the
+                                    range of technical abilities I’ve acquired during my studies. Although it may have
+                                    its limitations, I hope it provides a glimpse of my potential and dedication to
+                                    learning.
+                                </p>
+
+
+                                <div class="project-language ">
+                                    <h2 class="my-3">Tool Used</h2>
+                                    <div class="language-container ">
+                                        <div><i class="fa-brands fa-html5"></i> HTML</div>
+                                        <div><i class="fa-brands fa-css3-alt"></i> CSS</div>
+                                        <div><i class="fa-brands fa-php"></i> PHP</div>
+                                        <div><i class="fa-solid fa-database"></i> MySQL</div>
+                                        <div><i class="fa-brands fa-js"></i> JavaScript</div>
+                                        <div><i class="fa-brands fa-git-alt"></i> GIT</div>
+                                        <div><i class="fa-brands fa-github"></i> Github</div>
+                                        <div><i class="fa-brands fa-font-awesome"></i> Fontawesome</div>
+                                        <div><i class="fa-solid fa-bell"></i> Toastr</div>
+                                        <div><i class="fa-solid fa-check-double"></i> SweetAlert2</div>
+                                    </div>
+                                </div>
+
+                                <div class="link-container">
+                                    <h2 class="my-3 fs-3 ">See Live</h2>
+
+                                    <a href="https://estreganbeachresort.ct.ws/" target="_blank" id="visit"
+                                        class="text-secondary">Visit Website <i
+                                            class="fa-solid fa-up-right-from-square "></i></a>
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary py-2 px-3"
+                                data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- estregan ending -->
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- ckcm grading -->
             <div class="project-container">
                 <div class="project-image ">
                     <div class="laptop-container">
@@ -732,7 +926,7 @@
                         It was developed as part of my Bachelor of Science in Computer Science (BSCS) coursework during
                         my internship at Christ The King College de Maranding, Inc.
                     </p>
-                    <button class="Documents-btn" onclick="location.href='ckcm_grading.php';">
+                    <button class="Documents-btn" data-bs-toggle="modal" data-bs-target="#ckcmGradingModal">
                         <span class="folderContainer">
                             <svg class="fileBack" width="146" height="113" viewBox="0 0 146 113" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -778,6 +972,91 @@
                 </div>
             </div>
 
+            <!-- modal for ckcm grading-->
+            <div class="modal fade " id="ckcmGradingModal" tabindex="-1" aria-labelledby="ckcmGradingModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title  text-secondary" id="ckcmGradingModalLabel">Case Study
+                            </h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div
+                            class="modal-body text-center d-flex flex-column align-items-center justify-content-start modal-overflow">
+                            <!-- Your custom content here -->
+                            <p class="fs-1 fw-bold my-2">CKCM Grading</p>
+
+                            <div class="project-image ">
+                                <div class="laptop-container">
+                                    <img src="system_images/ckcm_grading.png" alt="Project Image" />
+                                    <div class="laptop-keyboard"></div>
+                                </div>
+                            </div>
+
+                            <h2 class="my-3 ">Project Overview</h2>
+                            <div class="modal-paragraph fs-5 ">
+                                <p class="text-justify my-3">
+                                    The CKCM Grading System is a web-based application designed to streamline the
+                                    grading process for educators. This system allows teachers to efficiently manage
+                                    student records, compute grades, and generate reports, all within a user-friendly
+                                    interface.
+                                </p>
+                                <p class="text-justify my-3">
+                                    This project was developed as part of my academic journey in the Bachelor of Science
+                                    in Computer Science (BSCS) program as Intern. It represents my commitment to
+                                    creating practical solutions that address real-world challenges in education. While
+                                    the system is not yet fully optimized or secured, it serves as a testament to my
+                                    growth as a developer and my ability to build functional web applications.
+                                </p>
+                                <p class="text-justify my-3">
+                                    Through this project, I gained valuable experience in full-stack web development,
+                                    including database management, backend programming, and responsive design. Although
+                                    there is room for improvement, the CKCM Grading System highlights my dedication to
+                                    learning and my passion for creating tools that make a difference.
+                                </p>
+
+
+                                <div class="project-language ">
+                                    <h2 class="my-3">Tool Used</h2>
+                                    <div class="language-container ">
+                                        <div><i class="fa-brands fa-laravel"></i> Laravel</div>
+                                        <div><i class="fa-brands fa-html5"></i> HTML</div>
+                                        <div><i class="fa-brands fa-css3-alt"></i> CSS</div>
+                                        <div><i class="fa-brands fa-php"></i> PHP</div>
+                                        <div><i class="fa-solid fa-database"></i> MySQL</div>
+                                        <div><i class="fa-brands fa-js"></i> JavaScript</div>
+                                        <div><i class="fa-brands fa-git-alt"></i> GIT</div>
+                                        <div><i class="fa-brands fa-github"></i> Github</div>
+                                        <div><i class="fa-brands fa-font-awesome"></i> Fontawesome</div>
+                                        <div><i class="fa-solid fa-file-pdf"></i> TCPDF</div>
+                                    </div>
+                                </div>
+
+                                <div class="link-container">
+                                    <h2 class="my-3 fs-3 ">See Live</h2>
+
+                                    <a href="https://grades.ckcm.edu.ph/" target="_blank" id="visit"
+                                        class="text-secondary">Visit Website <i
+                                            class="fa-solid fa-up-right-from-square "></i></a>
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary py-2 px-3"
+                                data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ckcm grading ending -->
+
+
 
 
 
@@ -785,10 +1064,234 @@
 
 
         </div>
+        <!-- end of project base container -->
+
+
     </section>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="contact" id="contact" style="padding-top: 80px;">
+        <h1 class="">Contact</h1>
+        <p class="text-primary">Feel free to reach out by submitting the form below, and I will
+            respond as quickly as possible.</p>
+        <div class="contact-container ">
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Replace with your Access Key -->
+                <input type="hidden" name="access_key" value="a54c7ac8-4e1f-4883-aa63-b87e866d75a8">
+
+                <!-- Form Inputs -->
+                <label for="">Name</label>
+                <input type="text" name="name" required placeholder="Your Name">
+                <label for="">Email</label>
+                <input type="email" name="email" required placeholder="Your Work Email">
+                <label for="">Message</label>
+                <textarea name="message" required placeholder="Your Message"></textarea>
+
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <p id="contactSuccessMsg"></p> <!-- Add an ID for targeting -->
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Loading Spinner (Hidden by default) -->
+    <div id="loadingScreen" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Styles for Loading Spinner -->
+    <style>
+        /* Full-screen overlay */
+        #loadingScreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        /* Spinner style */
+        .spinner {
+            border: 8px solid #f3f3f3;
+            /* Light gray */
+            border-top: 8px solid var(--color10);
+            /* Blue */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Spinner animation */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Show loading screen
+            document.getElementById('loadingScreen').style.display = 'flex';
+
+            // Submit the form using Fetch API
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: new FormData(this)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Hide the loading screen
+                    document.getElementById('loadingScreen').style.display = 'none';
+
+                    if (data.success) {
+                        // Show Bootstrap success alert in the <p> tag
+                        document.getElementById('contactSuccessMsg').innerHTML =
+                            '<div class="alert alert-success mt-3 d-flex align-items-center" role="alert">' +
+                            '<i class="fa-solid fa-circle-check me-2"></i>' +
+                            'Thank you! Your message has been sent successfully.' +
+                            '</div>';
+                        // Optionally reset the form
+                        document.getElementById('contactForm').reset();
+                    } else {
+                        // Show Bootstrap error alert in the <p> tag
+                        document.getElementById('contactSuccessMsg').innerHTML =
+                            '<div class="alert alert-danger mt-3 d-flex align-items-center" role="alert">' +
+                            '<i class="fa-solid fa-circle-xmark me-2"></i>' +
+                            'Something went wrong. Please try again later.' +
+                            '</div>';
+                    }
+                })
+                .catch(error => {
+                    // Hide the loading screen
+                    document.getElementById('loadingScreen').style.display = 'none';
+
+                    console.error('Error:', error);
+                    document.getElementById('contactSuccessMsg').innerHTML =
+                        '<div class="alert alert-danger mt-3 d-flex align-items-center" role="alert">' +
+                        '<i class="fa-solid fa-triangle-exclamation me-2"></i>' +
+                        'There was an issue submitting your form. Please try again later.' +
+                        '</div>';
+                });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-info-container">
+            <div class="footer-info">
+                <h1 class="fw-bold">Khemark Ocariza</h1>
+                <p>I'm a versatile Web Developer specializing in both front-end and back-end development. I create
+                    seamless
+                    user experiences and robust server-side functionality. Explore my work in the Projects section.
+                    Connect
+                    with me on any of my social media accounts for insights on web development and programming. I'm also
+                    open to
+                    exciting job opportunities—let's connect!</p>
+                <p>
+                    <i class="fa-solid fa-eye me-2 text-secondary"></i>
+                    Website Visits Count: <span id="visit-count" class="text-secondary">Loading...</span>
+                </p>
+
+            </div>
+            <div class="footer-social-info">
+                <h1 class="fw-bold"> Social</h1>
+                <div class="footer-social-container">
+                    <a href="https://www.linkedin.com/in/khemark-ocariza-509b71215/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Faithan" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a href="https://web.facebook.com/profile.php?id=100009511302416" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/m0n0s_/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-container">
+            <p class="text-primary">© Copyright <span id="current-year"></span>. Made by <a href="">Khemark Ocariza</a>
+            </p>
+        </div>
+
+
+    </footer>
+
 </body>
 
 </html>
+
+
+<script>
+    // Use a unique namespace/key for your site
+    fetch('https://api.countapi.xyz/hit/faithan-coolfolio/visits')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('visit-count').textContent = data.value;
+        });
+</script>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
