@@ -18,8 +18,8 @@ jobs:
       - name: Create or Update Release and Upload Files
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v.1.2.2
-          name: Coolfolio v1.2.2
+          tag_name: v.1.2.3
+          name: Coolfolio v1.2.3
           body: "Automated release from main branch."
           draft: false
           prerelease: false
