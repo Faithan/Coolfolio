@@ -12,16 +12,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-
-
       - name: Create or Update Release and Upload Files
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v.1.2.4
-          name: Coolfolio v1.2.4
-          body: "Automated release from main branch."
+          tag_name: v1.2.5
+          name: Coolfolio v1.2.5
+          body: 'Automated release from main branch.'
           draft: false
           prerelease: false
-          files: ./**
+          files: dist/**/* # Adjust this pattern to match your release artifacts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
