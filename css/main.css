@@ -1,6 +1,6 @@
 @font-face {
     font-family: montserrat;
-    src: url(fonts/Montserrat-VariableFont_wght.ttf);
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
 }
 
 * {
@@ -96,6 +96,20 @@ body {
 
 
 
+/* page animation */
+.hidden-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible-animation {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
 .modal-content {
     background-color: var(--background-color) !important;
     color: var(--text-color) !important;
@@ -139,7 +153,7 @@ body {
 
 /* nav */
 .nav-container {
-    padding: 15px 80px;
+    padding: 10px 80px;
     background-color: var(--color9);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
@@ -953,6 +967,10 @@ body .navbar-toggler {
 
 
 
+.modal-paragraph p {
+    font-size: 1.3rem !important;
+}
+
 
 
 
@@ -973,7 +991,7 @@ body .navbar-toggler {
 }
 
 .language-container div {
-
+    font-size: 1.2rem;
     text-align: center;
     padding: 5px;
     font-weight: 500;
@@ -981,6 +999,7 @@ body .navbar-toggler {
     background-color: var(--color8);
     border: 1px solid var(--color10);
     border-radius: 5px;
+ 
 }
 
 .language-container div:hover {
@@ -1008,6 +1027,7 @@ body .navbar-toggler {
 
 
 .link-container a {
+    font-size: 1.4rem;
     color: rgb(58, 123, 213);
     color: linear-gradient(0deg, rgba(58, 123, 213, 1) 0%, rgba(58, 207, 213, 1) 100%);
 }
@@ -1139,8 +1159,8 @@ form button {
 
 form button:hover {
     background-color: var(--color11);
-    transform: translateY(-2px);
     transition: ease-in-out 0.3s;
+    transform: translateY(-2px);
 }
 
 /* Add responsive design */

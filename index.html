@@ -8,18 +8,18 @@
 
     <link rel="icon" type="image/png" href="system_images/me1.jpg">
 
-    <link rel="stylesheet" href="main.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/animation.js"></script>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg  sticky-top z-5 nav-container">
-        <div
-            class="container-fluid d-flex justify-content-between align-items-center p-1 pe-3 ps-4 p-md-2   ps-xl-5 pe-xl-5   ps-xxl-5 pe-xxl-5">
+        <div class="container-fluid d-flex justify-content-between align-items-center p-1 pe-3 ps-4 p-md-2   ps-xl-5 pe-xl-5   ps-xxl-5 pe-xxl-5">
             <a href=""
                 class="navbar-brand d-flex gap-3 justify-content-center align-items-center text-decoration-none ms-xl-5 ms-lg-5 ms-md-2">
                 <img src="system_images/me1.jpg" alt="" class="profile-image">
@@ -74,14 +74,15 @@
 
     <section id="home" class="home container-fluid d-flex flex-column  align-items-center  text-primary">
 
-        <h1 class="home-header text-uppercase mb-5">Hey, I'm Khemark Ocariza</h1>
-        <p class="fs-3 custom-max-width text-center" style="margin-bottom: 50px;">Welcome to my portfolio! Here,
+        <h1 class="home-header text-uppercase mb-5 hidden-animation">Hey, I'm Khemark Ocariza</h1>
+        <p class="fs-3 custom-max-width text-center hidden-animation" style="margin-bottom: 50px;">Welcome to my
+            portfolio! Here,
             you’ll
             find a collection of creative ideas
             brought to life through design and
             functionality. I love crafting digital experiences that leave a lasting impression. Explore my work and
             let’s connect!</p>
-        <button class="" onclick="location.href='#projects';">Projects</button>
+        <button class="hidden-animation" onclick="location.href='#projects';">Projects</button>
         </div>
         <div class="scrolldown ">
             <div class="chevrons">
@@ -126,15 +127,15 @@
     <section class="about" id="about">
 
         <div class="about-header">
-            <h1 class="text-primary ">About me</h1>
-            <p class="">
+            <h1 class="text-primary hidden-animation">About me</h1>
+            <p class="hidden-animation">
                 Discover more about me, my passions, and the skills I've honed in programming and technology.
                 Explore what I do and how I bring ideas to life through code.
             </p>
         </div>
 
         <div class="about-content-container">
-            <div class="about-self">
+            <div class="about-self hidden-animation">
                 <h1 class="text-primary fw-bold">Get to know me!</h1>
                 <p class="text-primary">
                     I'm a versatile Web Developer with a strong focus on building and managing the front-end and
@@ -243,14 +244,14 @@
 
             </div>
 
-            <div class="about-skills ">
+            <div class="about-skills hidden-animation">
                 <h1 class="text-primary fw-bold">My Skills</h1>
                 <div class="skill-container ">
                     <!-- HTML Skill -->
                     <div class="skill-box">
                         <span>HTML</span>
                         <div class="skill-bar">
-                            <div class="skill-level" style="width: 98%;"></div>
+                            <div class="skill-level " style="width: 98%;"></div>
                         </div>
                         <p>98/100</p>
                         <div class="icon-container"><i class="fa-brands fa-html5"></i></div>
@@ -260,7 +261,7 @@
                     <div class="skill-box">
                         <span>CSS</i></span>
                         <div class="skill-bar">
-                            <div class="skill-level" style="width: 98%;"></div>
+                            <div class="skill-level " style="width: 98%;"></div>
                         </div>
                         <p>98/100</p>
                         <div class="icon-container"><i class="fa-brands fa-css3"></i></div>
@@ -270,17 +271,17 @@
                     <div class="skill-box">
                         <span>TailwindCSS</span>
                         <div class="skill-bar">
-                            <div class="skill-level" style="width: 90%;"></div>
+                            <div class="skill-level " style="width: 90%;"></div>
                         </div>
                         <p>90/100</p>
-                        <div class="icon-container"><i class="fa-solid fa-wind"></i></div>
+                        <div class="icon-container "><i class="fa-solid fa-wind"></i></div>
                     </div>
 
                     <!-- Bootstrap -->
                     <div class="skill-box">
                         <span>Bootstrap</span>
                         <div class="skill-bar">
-                            <div class="skill-level" style="width: 90%;"></div>
+                            <div class="skill-level " style="width: 90%;"></div>
                         </div>
                         <p>90/100</p>
                         <div class="icon-container"><i class="fa-brands fa-bootstrap"></i></div>
@@ -291,7 +292,7 @@
                     <div class="skill-box">
                         <span>JavaScript</span>
                         <div class="skill-bar">
-                            <div class="skill-level" style="width: 90%;"></div>
+                            <div class="skill-level " style="width: 90%;"></div>
                         </div>
                         <p>90/100</p>
                         <div class="icon-container"><i class="fa-brands fa-js"></i></div>
@@ -301,7 +302,7 @@
                     <div class="skill-box">
                         <span>PHP</span>
                         <div class="skill-bar">
-                            <div class="skill-level" style="width: 95%;"></div>
+                            <div class="skill-level " style="width: 95%;"></div>
                         </div>
                         <p>95/100</p>
                         <div class="icon-container"><i class="fa-brands fa-php"></i></div>
@@ -311,7 +312,7 @@
                     <div class="skill-box">
                         <span>Laravel</span>
                         <div class="skill-bar">
-                            <div class="skill-level" style="width: 90%;"></div>
+                            <div class="skill-level " style="width: 90%;"></div>
                         </div>
                         <p>90/100</p>
                         <div class="icon-container"><i class="fa-brands fa-laravel"></i></div>
@@ -321,7 +322,7 @@
                     <div class="skill-box">
                         <span>SQL</span>
                         <div class="skill-bar">
-                            <div class="skill-level" style="width: 95%;"></div>
+                            <div class="skill-level " style="width: 95%;"></div>
                         </div>
                         <p>95/100</p>
                         <div class="icon-container"><i class="fa-solid fa-database"></i></div>
@@ -331,7 +332,7 @@
                     <div class="skill-box">
                         <span>GIT</span>
                         <div class="skill-bar">
-                            <div class="skill-level" style="width: 95%;"></div>
+                            <div class="skill-level " style="width: 95%;"></div>
                         </div>
                         <p>95/100</p>
                         <div class="icon-container"><i class="fa-brands fa-git"></i></div>
@@ -341,7 +342,7 @@
                     <div class="skill-box">
                         <span>GitHub</span>
                         <div class="skill-bar">
-                            <div class="skill-level" style="width: 90%;"></div>
+                            <div class="skill-level " style="width: 90%;"></div>
                         </div>
                         <p>90/100</p>
                         <div class="icon-container"><i class="fa-brands fa-github"></i></div>
@@ -351,7 +352,7 @@
                     <div class="skill-box">
                         <span>Responsive Design</span>
                         <div class="skill-bar">
-                            <div class="skill-level" style="width: 98%;"></div>
+                            <div class="skill-level " style="width: 98%;"></div>
                         </div>
                         <p>98/100</p>
                         <div class="icon-container"><i class="fa-solid fa-desktop"></i> <i
@@ -365,7 +366,7 @@
                     <div class="skill-box">
                         <span>TCPDF</span>
                         <div class="skill-bar">
-                            <div class="skill-level" style="width: 90%;"></div>
+                            <div class="skill-level " style="width: 90%;"></div>
                         </div>
                         <p>90/100</p>
                         <div class="icon-container"><i class="fa-solid fa-file-pdf"></i></div>
@@ -382,7 +383,7 @@
 
 
         <!-- project header -->
-        <div class="projects-header">
+        <div class="projects-header hidden-animation">
             <h1 class="">Projects</h1>
             <p class="">
                 Explore a collection of both personal and client projects, each accompanied by a detailed case study
@@ -399,7 +400,7 @@
 
 
             <!-- coolfolio -->
-            <div class="project-container">
+            <div class="project-container hidden-animation">
                 <div class="project-image ">
                     <div class="laptop-container">
                         <img src="system_images/coolfolio.png" alt="Project Image" />
@@ -491,7 +492,7 @@
                             </div>
 
                             <h2 class="my-3">Project Overview</h2>
-                            <div class="modal-paragraph fs-5 ">
+                            <div class="modal-paragraph ">
                                 <p class="text-justify my-3">
                                     I created a simple and straightforward portfolio to showcase my skills, knowledge,
                                     and projects as a budding developer. This portfolio is a reflection of my dedication
@@ -586,7 +587,7 @@
 
 
             <!-- royale project -->
-            <div class="project-container">
+            <div class="project-container hidden-animation">
                 <div class="project-image ">
                     <div class="laptop-container">
                         <img src="system_images/royale.png" alt="Project Image" />
@@ -672,7 +673,7 @@
                             </div>
 
                             <h2 class="my-3 ">Project Overview</h2>
-                            <div class="modal-paragraph fs-5 ">
+                            <div class="modal-paragraph  ">
                                 <p class="text-justify my-3">
                                     I developed an online request and order system for Royale Tailoring, allowing
                                     customers to book appointments for tailoring services and place orders for product
@@ -748,7 +749,7 @@
 
 
 
-            <div class="project-container">
+            <div class="project-container hidden-animation">
                 <div class="project-image ">
                     <div class="laptop-container">
                         <img src="system_images/estregan_pic.png" alt="Project Image" />
@@ -833,7 +834,7 @@
                             </div>
 
                             <h2 class="my-3 ">Project Overview</h2>
-                            <div class="modal-paragraph fs-5 ">
+                            <div class="modal-paragraph ">
                                 <p class="text-justify my-3">
                                     I developed an online reservation system for Estregan Beach Resort, allowing
                                     customers to easily book rooms and cottages. This system streamlines the resort’s
@@ -875,7 +876,7 @@
                                 </div>
 
                                 <div class="link-container">
-                                    <h2 class="my-3 fs-3 ">See Live</h2>
+                                    <h2 class="my-3 ">See Live</h2>
 
                                     <a href="https://estreganbeachresort.ct.ws/" target="_blank" id="visit"
                                         class="text-secondary">Visit Website <i
@@ -920,7 +921,7 @@
 
 
             <!-- ckcm grading -->
-            <div class="project-container">
+            <div class="project-container hidden-animation">
                 <div class="project-image ">
                     <div class="laptop-container">
                         <img src="system_images/ckcm_grading.png" alt="Project Image" />
@@ -1005,7 +1006,7 @@
                             </div>
 
                             <h2 class="my-3 ">Project Overview</h2>
-                            <div class="modal-paragraph fs-5 ">
+                            <div class="modal-paragraph">
                                 <p class="text-justify my-3">
                                     The CKCM Grading System is a web-based application designed to streamline the
                                     grading process for educators. This system allows teachers to efficiently manage
@@ -1101,10 +1102,10 @@
 
 
     <section class="contact" id="contact" style="padding-top: 80px;">
-        <h1 class="">Contact</h1>
-        <p class="text-primary">Feel free to reach out by submitting the form below, and I will
+        <h1 class="hidden-animation">Contact</h1>
+        <p class="text-primary hidden-animation">Feel free to reach out by submitting the form below, and I will
             respond as quickly as possible.</p>
-        <div class="contact-container ">
+        <div class="contact-container hidden-animation">
             <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                 <!-- Replace with your Access Key -->
                 <input type="hidden" name="access_key" value="a54c7ac8-4e1f-4883-aa63-b87e866d75a8">
