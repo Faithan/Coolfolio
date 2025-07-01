@@ -999,7 +999,7 @@ body .navbar-toggler {
     background-color: var(--color8);
     border: 1px solid var(--color10);
     border-radius: 5px;
- 
+
 }
 
 .language-container div:hover {
@@ -1202,6 +1202,11 @@ form button:hover {
 
 
 @media (max-width: 768px) {
+
+    /* nav */
+    .nav-container {
+        padding: 10px 20px;
+    }
 
     .project-container {
         display: flex;
@@ -1656,6 +1661,75 @@ form button:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* footer */
 
 /* footer */
@@ -1738,6 +1812,9 @@ footer h1 {
     color: var(--text-color);
     font-weight: bold;
 }
+
+
+
 
 
 
