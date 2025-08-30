@@ -887,79 +887,82 @@ body .navbar-toggler {
 
 
 
-/* From Uiverse.io by vinodjangid07 */
+/* Redesigned Documents button: pill-shaped gradient with left folder icon */
 .Documents-btn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: flex-start;
-    width: fit-content;
-    height: 45px;
+    justify-content: center; /* center the label horizontally */
+    gap: 12px;
+    padding: 8px 24px 8px 56px; /* left padding reserves space for pseudo-icon */
+    min-width: 160px; /* helps keep the label centered visually */
+    height: 48px;
     border: none;
-    padding: 0px 10px;
-    border-radius: 5px;
-
-    background: rgb(58, 123, 213);
-    background: linear-gradient(0deg, rgba(58, 123, 213, 1) 0%, rgba(58, 207, 213, 1) 100%);
-    gap: 10px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.folderContainer {
-    width: 40px;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+    border-radius: 999px;
     position: relative;
+    /* animated blue gradient */
+    background: linear-gradient(90deg, #2f6fb8 0%, #3a7bd5 25%, #3acfd5 60%, #6fd3ff 100%);
+    background-size: 200% 100%;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1;
+    box-shadow: 0 6px 18px rgba(58, 96, 163, 0.16), inset 0 -2px 0 rgba(0,0,0,0.06);
+    cursor: pointer;
+    transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease, background-position 3s linear;
 }
 
-.fileBack {
-    z-index: 1;
-    width: 80%;
-    height: auto;
-}
-
-.filePage {
-    width: 50%;
-    height: auto;
+/* left folder icon implemented via pseudo-element so HTML doesn't need changes */
+.Documents-btn::before {
+    content: "";
     position: absolute;
-    z-index: 2;
-    transition: all 0.3s ease-out;
+    left: 14px;
+    width: 24px;
+    height: 18px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid meet'><path fill='%23FFFFFF' d='M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z'/></svg>");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.98;
 }
 
-.fileFront {
-    width: 85%;
-    height: auto;
-    position: absolute;
-    z-index: 3;
-    opacity: 0.95;
-    transform-origin: bottom;
-    transition: all 0.3s ease-out;
+/* animate the gradient sliding subtly left-right */
+@keyframes docs-bg-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-.text {
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+.Documents-btn {
+    animation: docs-bg-shift 6s ease-in-out infinite;
 }
 
-.Documents-btn:hover .filePage {
-    transform: translateY(-5px);
+@media (prefers-reduced-motion: reduce) {
+    .Documents-btn { animation: none; transition: none; }
 }
 
 .Documents-btn:hover {
-    background-color: var(--color11);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px rgba(58, 96, 163, 0.22);
+    filter: brightness(1.02);
 }
 
 .Documents-btn:active {
-    transform: scale(0.95);
+    transform: translateY(-1px) scale(0.99);
 }
 
-.Documents-btn:hover .fileFront {
-    transform: rotateX(30deg);
+.Documents-btn:focus-visible {
+    outline: 3px solid rgba(58, 123, 213, 0.18);
+    outline-offset: 4px;
+}
+
+.text {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    display: block;
+    text-align: center; /* center text inside the button */
+ 
 }
 
 
