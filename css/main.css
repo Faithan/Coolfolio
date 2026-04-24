@@ -68,10 +68,6 @@ body {
 }
 
 
-.dark-mode {}
-
-
-
 /* scroll bar settings */
 
 
@@ -190,6 +186,10 @@ body .navbar-toggler {
     display: none;
 }
 
+.navbar-toggler-icon-color {
+    color: var(--color10);
+}
+
 
 
 
@@ -223,6 +223,10 @@ body .navbar-toggler {
     /* or any value you prefer */
     margin-left: auto;
     margin-right: auto;
+}
+
+.home-intro {
+    margin-bottom: 50px;
 }
 
 .home button {
@@ -718,6 +722,18 @@ body .navbar-toggler {
     background: linear-gradient(0deg, rgba(58, 123, 213, 1) 0%, rgba(58, 207, 213, 1) 100%);
     border-radius: 5px;
     transition: width 0.5s ease-in-out;
+}
+
+.skill-w-90 {
+    width: 90%;
+}
+
+.skill-w-95 {
+    width: 95%;
+}
+
+.skill-w-98 {
+    width: 98%;
 }
 
 .skill-box p {
@@ -2009,4 +2025,8 @@ footer h1 {
 
 
 
+}
+
+.contact-top-padding {
+    padding-top: 80px;
 }
