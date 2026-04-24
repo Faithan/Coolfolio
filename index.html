@@ -101,6 +101,13 @@
             <h1 class="">Projects</h1>
             <p>Explore a collection of both personal and client projects, each accompanied by a detailed case study that highlights the creative process and outcomes.</p>
         </div>
+        <div class="projects-tools hidden-animation">
+            <div class="projects-search">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                <input type="text" id="projectSearchInput" placeholder="Search projects..." aria-label="Search projects">
+            </div>
+            <p class="projects-meta" id="projectsMeta" aria-live="polite"></p>
+        </div>
         <div class="projects-base-container">
             <!-- Coolfolio -->
             <div class="project-container hidden-animation">
@@ -147,6 +154,12 @@
             <!-- ckcmGradingModal -->
             <div class="modal fade" id="ckcmGradingModal" tabindex="-1" aria-labelledby="ckcmGradingModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg "><div class="modal-content"><div class="modal-header"><h4 class="modal-title  text-secondary" id="ckcmGradingModalLabel">Case Study</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body text-center d-flex flex-column align-items-center justify-content-start modal-overflow"><p class="fs-1 fw-bold my-2">CKCM Grading</p><div class="project-image "><div class="laptop-container"><img src="system_images/ckcm_grading.png" alt="Project Image" /><div class="laptop-keyboard"></div></div></div><h2 class="my-3 ">Project Overview</h2><div class="modal-paragraph"><p class="text-justify my-3">The CKCM Grading System is a web-based application designed to streamline the grading process for educators. This system allows teachers to efficiently manage student records, compute grades, and generate reports, all within a user-friendly interface.</p><p class="text-justify my-3">This project was developed as part of my academic journey in the Bachelor of Science in Computer Science (BSCS) program as Intern. It represents my commitment to creating practical solutions that address real-world challenges in education. While the system is not yet fully optimized or secured, it serves as a testament to my growth as a developer and my ability to build functional web applications.</p><p class="text-justify my-3">Through this project, I gained valuable experience in full-stack web development, including database management, backend programming, and responsive design. Although there is room for improvement, the CKCM Grading System highlights my dedication to learning and my passion for creating tools that make a difference.</p><div class="project-language "><h2 class="my-3">Tool Used</h2><div class="language-container "><div><i class="fa-brands fa-laravel"></i> Laravel</div><div><i class="fa-brands fa-html5"></i> HTML</div><div><i class="fa-brands fa-css3-alt"></i> CSS</div><div><i class="fa-brands fa-php"></i> PHP</div><div><i class="fa-solid fa-database"></i> MySQL</div><div><i class="fa-brands fa-js"></i> JavaScript</div><div><i class="fa-brands fa-git-alt"></i> GIT</div><div><i class="fa-brands fa-github"></i> Github</div><div><i class="fa-brands fa-font-awesome"></i> Fontawesome</div><div><i class="fa-solid fa-file-pdf"></i> TCPDF</div></div></div><div class="link-container"><h2 class="my-3 fs-3 ">See Live</h2><a href="https://grades.ckcm.edu.ph/" target="_blank" id="visit" class="text-secondary">Visit Website <i class="fa-solid fa-up-right-from-square "></i></a></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary py-2 px-3" data-bs-dismiss="modal">Close</button></div></div></div></div>
 
+        </div>
+        <p class="projects-no-results" id="projectsNoResults">No projects matched your search.</p>
+        <div class="projects-pagination hidden-animation" id="projectsPagination" aria-label="Projects pagination">
+            <button type="button" class="projects-page-btn" id="projectsPrevBtn">Previous</button>
+            <span class="projects-page-indicator" id="projectsPageInfo"></span>
+            <button type="button" class="projects-page-btn" id="projectsNextBtn">Next</button>
         </div>
     </section>
 
@@ -288,6 +301,83 @@
         (function () { const el = document.getElementById('release-version'); if (!el) return; const repoOwner = 'faithan'; const repoName = 'Coolfolio'; fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/releases/latest`).then(r=>{ if(!r.ok) throw new Error('Failed'); return r.json() }).then(data=>{ el.textContent = data.tag_name || 'Unavailable' }).catch(()=>{ el.textContent = 'Unavailable' }); })();
         (function () { const el = document.getElementById('visit-count'); if (!el) return; fetch('https://visits.deno.dev/faithan-coolfolio').then(r=>r.json()).then(d=>{ el.textContent = d.total }).catch(()=>{ el.textContent = 'Unavailable' }); })();
         (function () { const el = document.getElementById('current-year'); if (el) el.textContent = new Date().getFullYear(); })();
+
+        (function () {
+            const searchInput = document.getElementById('projectSearchInput');
+            const projectsMeta = document.getElementById('projectsMeta');
+            const projectsNoResults = document.getElementById('projectsNoResults');
+            const pagination = document.getElementById('projectsPagination');
+            const prevBtn = document.getElementById('projectsPrevBtn');
+            const nextBtn = document.getElementById('projectsNextBtn');
+            const pageInfo = document.getElementById('projectsPageInfo');
+            const listContainer = document.querySelector('.projects-base-container');
+
+            if (!searchInput || !projectsMeta || !projectsNoResults || !pagination || !prevBtn || !nextBtn || !pageInfo || !listContainer) return;
+
+            const allProjects = Array.from(listContainer.querySelectorAll('.project-container'));
+            if (!allProjects.length) return;
+
+            const itemsPerPage = 2;
+            let currentPage = 1;
+            let filteredProjects = [...allProjects];
+
+            const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+
+            function applyFilter() {
+                const query = searchInput.value.trim().toLowerCase();
+                filteredProjects = allProjects.filter((project) => {
+                    const title = project.querySelector('h2')?.textContent.toLowerCase() || '';
+                    const description = project.querySelector('p')?.textContent.toLowerCase() || '';
+                    return title.includes(query) || description.includes(query);
+                });
+                currentPage = 1;
+                render();
+            }
+
+            function render() {
+                const totalItems = filteredProjects.length;
+                const totalPages = Math.max(1, Math.ceil(totalItems / itemsPerPage));
+                currentPage = clamp(currentPage, 1, totalPages);
+
+                const start = (currentPage - 1) * itemsPerPage;
+                const end = start + itemsPerPage;
+                const visibleProjects = new Set(filteredProjects.slice(start, end));
+
+                allProjects.forEach((project) => {
+                    project.style.display = visibleProjects.has(project) ? 'flex' : 'none';
+                });
+
+                if (!totalItems) {
+                    projectsMeta.textContent = 'Showing 0 of 0 projects';
+                    pageInfo.textContent = 'Page 0 of 0';
+                } else {
+                    const startItem = start + 1;
+                    const endItem = Math.min(end, totalItems);
+                    projectsMeta.textContent = `Showing ${startItem}-${endItem} of ${totalItems} projects`;
+                    pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+                }
+
+                projectsNoResults.classList.toggle('show', totalItems === 0);
+                pagination.style.display = totalItems > 0 ? 'flex' : 'none';
+
+                prevBtn.disabled = currentPage <= 1;
+                nextBtn.disabled = currentPage >= totalPages;
+            }
+
+            prevBtn.addEventListener('click', function () {
+                currentPage -= 1;
+                render();
+            });
+
+            nextBtn.addEventListener('click', function () {
+                currentPage += 1;
+                render();
+            });
+
+            searchInput.addEventListener('input', applyFilter);
+
+            render();
+        })();
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

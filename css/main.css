@@ -782,6 +782,110 @@ body .navbar-toggler {
 }
 
 
+.projects-tools {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.projects-search {
+    position: relative;
+    flex: 1;
+    min-width: 260px;
+    max-width: 560px;
+}
+
+.projects-search i {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    color: var(--color10);
+}
+
+.projects-search input {
+    width: 100%;
+    height: 52px;
+    border-radius: 999px;
+    border: 1px solid rgba(58, 207, 213, 0.45);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    padding: 0 20px 0 46px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projects-search input::placeholder {
+    color: rgba(240, 242, 241, 0.7);
+}
+
+.projects-search input:focus {
+    border-color: var(--color10);
+    box-shadow: 0 0 0 3px rgba(58, 207, 213, 0.2);
+}
+
+.projects-meta {
+    margin: 0;
+    color: var(--text-color2);
+    font-size: 1.05rem;
+}
+
+.projects-no-results {
+    display: none;
+    margin: 0;
+    padding: 0 20px 40px;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.3rem;
+}
+
+.projects-no-results.show {
+    display: block;
+}
+
+.projects-pagination {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.projects-page-btn {
+    background: linear-gradient(90deg, #3aa0d8 0%, #44d1d8 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: transform 0.15s ease, opacity 0.2s ease;
+}
+
+.projects-page-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.projects-page-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.projects-page-indicator {
+    color: var(--text-color);
+    font-size: 1.05rem;
+    min-width: 125px;
+    text-align: center;
+}
+
+
 
 .projects-base-container {
     display: flex;
@@ -1534,6 +1638,21 @@ form button:hover {
         padding: 20px;
     }
 
+    .projects-tools {
+        margin-bottom: 30px;
+        align-items: stretch;
+    }
+
+    .projects-search {
+        max-width: 100%;
+    }
+
+    .projects-meta {
+        width: 100%;
+        font-size: 1rem;
+        padding-left: 4px;
+    }
+
 
 
     .projects-base-container {
@@ -1610,6 +1729,20 @@ form button:hover {
     /* From Uiverse.io by vinodjangid07 */
     .Documents-btn {
         align-self: center;
+    }
+
+    .projects-pagination {
+        padding: 0 20px 70px;
+    }
+
+    .projects-page-btn {
+        padding: 9px 15px;
+        font-size: 0.95rem;
+    }
+
+    .projects-page-indicator {
+        min-width: 110px;
+        font-size: 0.95rem;
     }
 
 
