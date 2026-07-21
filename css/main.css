@@ -751,9 +751,53 @@ body .navbar-toggler {
     color: var(--text-color);
 }
 
+.skills-pagination {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
 
+.skills-page-btn {
+    background: linear-gradient(90deg, #3aa0d8 0%, #44d1d8 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: transform 0.15s ease, opacity 0.2s ease;
+}
 
+.skills-page-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
 
+.skills-page-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.skills-page-indicator {
+    color: var(--text-color);
+    font-size: 1.05rem;
+    min-width: 125px;
+    text-align: center;
+}
+
+.skills-page {
+    display: none;
+    width: 100%;
+}
+
+.skills-page.active {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
 
 
@@ -1757,6 +1801,20 @@ form button:hover {
     }
 
     .projects-page-indicator {
+        min-width: 110px;
+        font-size: 0.95rem;
+    }
+
+    .skills-pagination {
+        padding: 0 20px 70px;
+    }
+
+    .skills-page-btn {
+        padding: 9px 15px;
+        font-size: 0.95rem;
+    }
+
+    .skills-page-indicator {
         min-width: 110px;
         font-size: 0.95rem;
     }
