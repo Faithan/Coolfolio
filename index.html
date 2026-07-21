@@ -394,6 +394,7 @@
         (function () { const el = document.getElementById('release-version'); if (!el) return; const repoOwner = 'faithan'; const repoName = 'Coolfolio'; fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/releases/latest`).then(r => { if (!r.ok) throw new Error('Failed'); return r.json() }).then(data => { el.textContent = data.tag_name || 'Unavailable' }).catch(() => { el.textContent = 'Unavailable' }); })();
         (function () { const el = document.getElementById('visit-count'); if (!el) return; fetch('https://visits.deno.dev/faithan-coolfolio').then(r => r.json()).then(d => { el.textContent = d.total }).catch(() => { el.textContent = 'Unavailable' }); })();
         (function () { const el = document.getElementById('current-year'); if (el) el.textContent = new Date().getFullYear(); })();
+    </script>
 
     <script>
         (function () {
