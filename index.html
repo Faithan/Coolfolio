@@ -102,106 +102,7 @@
             </div>
             <div class="about-skills hidden-animation">
                 <h1 class="text-primary fw-bold">My Skills</h1>
-                <div class="skill-container" id="skillsContainer">
-                    <div class="skills-page">
-                        <div class="skill-box"><span>HTML</span>
-                            <div class="skill-bar">
-                                <div class="skill-level skill-w-98"></div>
-                            </div>
-                            <p>98/100</p>
-                            <div class="icon-container"><i class="fa-brands fa-html5"></i></div>
-                        </div>
-                        <div class="skill-box"><span>CSS</span>
-                            <div class="skill-bar">
-                                <div class="skill-level skill-w-98"></div>
-                            </div>
-                            <p>98/100</p>
-                            <div class="icon-container"><i class="fa-brands fa-css3"></i></div>
-                        </div>
-                        <div class="skill-box"><span>TailwindCSS</span>
-                            <div class="skill-bar">
-                                <div class="skill-level skill-w-90"></div>
-                            </div>
-                            <p>90/100</p>
-                            <div class="icon-container "><i class="fa-solid fa-wind"></i></div>
-                        </div>
-                        <div class="skill-box"><span>Bootstrap</span>
-                            <div class="skill-bar">
-                                <div class="skill-level skill-w-90"></div>
-                            </div>
-                            <p>90/100</p>
-                            <div class="icon-container"><i class="fa-brands fa-bootstrap"></i></div>
-                        </div>
-                        <div class="skill-box"><span>Vue</span>
-                            <div class="skill-bar">
-                                <div class="skill-level skill-w-90"></div>
-                            </div>
-                            <p>90/100</p>
-                            <div class="icon-container"><i class="fa-brands fa-vuejs"></i></div>
-                        </div>
-                        <div class="skill-box"><span>JavaScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-level skill-w-90"></div>
-                            </div>
-                            <p>90/100</p>
-                            <div class="icon-container"><i class="fa-brands fa-js"></i></div>
-                        </div>
-                    </div>
-                    <div class="skills-page">
-                        <div class="skill-box"><span>PHP</span>
-                            <div class="skill-bar">
-                                <div class="skill-level skill-w-95"></div>
-                            </div>
-                            <p>95/100</p>
-                            <div class="icon-container"><i class="fa-brands fa-php"></i></div>
-                        </div>
-                        <div class="skill-box"><span>Laravel</span>
-                            <div class="skill-bar">
-                                <div class="skill-level skill-w-90"></div>
-                            </div>
-                            <p>90/100</p>
-                            <div class="icon-container"><i class="fa-brands fa-laravel"></i></div>
-                        </div>
-                        <div class="skill-box"><span>SQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-level skill-w-95"></div>
-                            </div>
-                            <p>95/100</p>
-                            <div class="icon-container"><i class="fa-solid fa-database"></i></div>
-                        </div>
-                        <div class="skill-box"><span>GIT</span>
-                            <div class="skill-bar">
-                                <div class="skill-level skill-w-95"></div>
-                            </div>
-                            <p>95/100</p>
-                            <div class="icon-container"><i class="fa-brands fa-git"></i></div>
-                        </div>
-                        <div class="skill-box"><span>GitHub</span>
-                            <div class="skill-bar">
-                                <div class="skill-level skill-w-90"></div>
-                            </div>
-                            <p>90/100</p>
-                            <div class="icon-container"><i class="fa-brands fa-github"></i></div>
-                        </div>
-                        <div class="skill-box"><span>Responsive Design</span>
-                            <div class="skill-bar">
-                                <div class="skill-level skill-w-98"></div>
-                            </div>
-                            <p>98/100</p>
-                            <div class="icon-container"><i class="fa-solid fa-desktop"></i> <i
-                                    class="fa-solid fa-laptop"></i> <i class="fa-solid fa-mobile-screen-button"></i></div>
-                        </div>
-                    </div>
-                    <div class="skills-page">
-                        <div class="skill-box"><span>TCPDF</span>
-                            <div class="skill-bar">
-                                <div class="skill-level skill-w-90"></div>
-                            </div>
-                            <p>90/100</p>
-                            <div class="icon-container"><i class="fa-solid fa-file-pdf"></i></div>
-                        </div>
-                    </div>
-                </div>
+                <div class="skill-container" id="skillsContainer"></div>
                 <div class="skills-pagination hidden-animation" id="skillsPagination" aria-label="Skills pagination">
                     <button type="button" class="skills-page-btn" id="skillsPrevBtn">Previous</button>
                     <span class="skills-page-indicator" id="skillsPageInfo"></span>
@@ -396,51 +297,11 @@
         (function () { const el = document.getElementById('current-year'); if (el) el.textContent = new Date().getFullYear(); })();
     </script>
 
-    <script>
-        (function () {
-            const pages = document.querySelectorAll('.skills-page');
-            const prevBtn = document.getElementById('skillsPrevBtn');
-            const nextBtn = document.getElementById('skillsNextBtn');
-            const pageInfo = document.getElementById('skillsPageInfo');
-            const pagination = document.getElementById('skillsPagination');
-
-            if (!pages.length || !prevBtn || !nextBtn || !pageInfo || !pagination) return;
-
-            let currentPage = 1;
-            const totalPages = pages.length;
-
-            function render() {
-                pages.forEach((page, index) => {
-                    page.classList.toggle('active', index + 1 === currentPage);
-                });
-
-                pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
-                prevBtn.disabled = currentPage <= 1;
-                nextBtn.disabled = currentPage >= totalPages;
-            }
-
-            prevBtn.addEventListener('click', function () {
-                if (currentPage > 1) {
-                    currentPage -= 1;
-                    render();
-                }
-            });
-
-            nextBtn.addEventListener('click', function () {
-                if (currentPage < totalPages) {
-                    currentPage += 1;
-                    render();
-                }
-            });
-
-            render();
-        })();
-    </script>
-
     <div id="projectsModals"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/animation.js"></script>
+    <script src="js/skills.js"></script>
     <script src="js/projects.js"></script>
 </body>
 
